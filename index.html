@@ -1,128 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>Personalized Website</title>
-<meta name="description" content=""/>
-<meta name="robots" content="NOINDEX,FOLLOW"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-<link rel="icon" href="https://static.basicinvite.com/media/favicon/stores/2/favicon-32x32.png" type="image/x-icon"/>
-<link rel="shortcut icon" href="https://static.basicinvite.com/media/favicon/stores/2/favicon-32x32.png" type="image/x-icon"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="/js/jquery/unitegallery/css/unite-gallery.css">
-<link rel="stylesheet" href="/skin/frontend/basicinvite/default/css/bootstrap/css/bootstrap_override.css">
-<link rel="stylesheet" href="/skin/frontend/basicinvite/default/css/basicinvite/website/default.css">
-
-<script type="text/javascript">
-        window.originalArray = {};
-        window.originalArray.from = Array.from;
-        window.originalArray.entries = Array.prototype.entries;
-        
-        if (!window.BasicInvite) window.BasicInvite = {};
-        if (!window.BasicInvite.Main) window.BasicInvite.Main = {};
-         
-        window.BasicInvite.Data = {
-            Angular: {
-                App: {
-                    AddressBook: {
-                        config: {_initialized: false}
-                    },
-                    PlaceCard: {
-                        config: {_initialized: false}
-                    },
-                    Website: {
-                        config: {_initialized: false}
-                    }
-                }
-            },
-            Config: { 
-                ProductPage:{}, 
-                ColorConfig: {}, 
-                FontConfig: {} 
-            },
-            currency: {
-                symbol: "$"
-            },
-            ProductTemplate: null,
-            Lada: {}, 
-            Product: {},
-            Route: {}, 
-            Window: {
-                Event: {
-                    load: false
-                }
-            },
-            Store: {
-              id: "2",  
-            },
-            Customer: { 
-                name: "",
-                email:  ""
-            }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Test Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
-        </script>
-<script  defer="defer"  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script  defer="defer"  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-<script  defer="defer"  type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-
-<link rel="canonical" href="https://www.basicinvite.com/site/basicinvite-website-demo-35948" />
-<script  defer="defer"   type="text/javascript" src="https://static.basicinvite.com/js/jqueryui/jquery.ui.touch-punch.min.js?q=1419271322"></script>
-<script  defer="defer"   type="text/javascript" src="https://static.basicinvite.com/js/jquery/unitegallery/js/unitegallery.min.js?q=1566236515"></script>
-<script  defer="defer"   type="text/javascript" src="https://static.basicinvite.com/js/jquery/unitegallery/themes/tiles/ug-theme-tiles.js?q=1566236515"></script>
-<script  defer="defer"   type="text/javascript" src="https://static.basicinvite.com/js/basicinvite/eventbus.js?q=1615480510"></script>
-<script  defer="defer"   type="text/javascript" src="https://static.basicinvite.com/js/basicinvite/library/dist/library/runtime~Main.js?q=1730241658"></script>
-<script  defer="defer"   type="text/javascript" src="https://static.basicinvite.com/js/basicinvite/library/dist/library/shared/editor.js?q=1730241658"></script>
-<script  defer="defer"   type="text/javascript" src="https://static.basicinvite.com/js/basicinvite/library/dist/library/shared/hammerjs.js?q=1730241658"></script>
-<script  defer="defer"   type="text/javascript" src="https://static.basicinvite.com/js/basicinvite/library/dist/library/shared/lodash.js?q=1730241658"></script>
-<script  defer="defer"   type="text/javascript" src="https://static.basicinvite.com/js/basicinvite/library/dist/library/shared/modules.js?q=1730241658"></script>
-<script  defer="defer"   type="text/javascript" src="https://static.basicinvite.com/js/basicinvite/library/dist/library/Main.js?q=1730241658"></script>
-<script  defer="defer"   type="text/javascript" src="https://static.basicinvite.com/js/basicinvite/modal/modal-global.js?q=1669843303"></script>
-<script  defer="defer"   type="text/javascript" src="https://static.basicinvite.com/js/basicinvite/angular_apps/website/dist/angular.app.polyfills.js?q=1730241640"></script>
-<script  defer="defer"   type="text/javascript" src="https://static.basicinvite.com/js/basicinvite/angular_apps/website/dist/angular.app.runtime.js?q=1730241640"></script>
-<script  defer="defer"   type="text/javascript" src="https://static.basicinvite.com/js/basicinvite/angular_apps/website/dist/angular.app.vendor.js?q=1730241640"></script>
-<script  defer="defer"   type="text/javascript" src="https://static.basicinvite.com/js/basicinvite/angular_apps/website/dist/angular.app.Website.js?q=1730241640"></script>
-<script  defer="defer"  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zoid/9.0.86/zoid.min.js"></script>
-<script  defer="defer"  type="text/javascript" src="https://cdn.sendbirdie.com/lib/1.0.7/birdie-registry-sandbox.js" id="birdie-script" data-subdomain="basicinvite"></script>
-                            <script src="/js/basicinvite/library/dist/static/Defer.js"   defer="defer"  >window.BasicInvite.Data.Lada.saveOnChanges = true;</script>
-                         <!--Favicon-->
-<link rel="icon" href="/favicon/basicinvite/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/basicinvite/apple-touch-icon.png?v=3">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon/basicinvite/favicon-32x32.png?v=3">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon/basicinvite/favicon-16x16.png?v=3">
-<link rel="mask-icon" href="/favicon/basicinvite/safari-pinned-tab.svg?v=3" color="#a3906d">
-<link rel="shortcut icon" href="/favicon/basicinvite/favicon.ico?v=3">
-<meta name="apple-mobile-web-app-title" content="Basic Invite">
-<meta name="application-name" content="Basic Invite">
-<meta name="msapplication-TileColor" content="#000000">
-<meta name="msapplication-config" content="/favicon/basicinvite/browserconfig.xml?v=3">
-<meta name="theme-color" content="#ffffff">
-
-<!-- EU cookie -->
-<script>
-  (function () {
-    var s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.async = true;
-    s.src = 'https://app.termly.io/embed.min.js';
-    s.id = '45287fbc-bd3f-46e4-8675-8a59b192babe';
-    s.setAttribute("data-name", "termly-embed-banner");
-    var x = document.getElementsByTagName('script')[0];
-    x.parentNode.insertBefore(s, x);
-  })();
-</script>
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
-<body class="website-index-index ">
+<body>
 
+<header>
+    <h1>Welcome to My Test Page</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
 
-<script type="text/javascript" event="DOMContentLoaded" src="/js/basicinvite/library/dist/static/Defer.js">
-    window.BasicInvite.Data.GoogleAnalytics4ConfigData = {
-        trackingId: "G-FCDRDS2FG9"
-    };
-    window.BasicInvite.Data.GoogleAnalytics4EventData = {};
-</script>
-<script type="text/javascript" event="DOMContentLoaded" src="/js/basicinvite/library/dist/static/Defer.js">
-    if(!window.BasicInvite?.Data?.Birdie) {
-        window.BasicInvite.Data.Birdie = {"theme_key":"basicinvite","subdomain":"basicinvite","client_id":"982d7400-cce0-42ad-a036-583c65a547b8","container_id":"birdie-registry","enabled":true,"popup_enabled":false,"occasion":"Wedding"}
+<div class="container">
+    <h2>About This Page</h2>
+    <p>This is a simple web page designed to demonstrate basic HTML and CSS. You can customize this template to suit your needs.</p>
+    <p>Feel free to add more content, styles, or functionalities as you wish!</p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Simple Test Page</p>
+</footer>
+
+</body>
+</html>
