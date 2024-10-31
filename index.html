@@ -3,173 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Invitation</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap">
+    <title>Abhinav Kesherwani - Resume</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             background-color: #b0e0e6; /* Powder Blue */
-            color: black; /* Black font color */
-            transition: background-color 0.3s ease; /* Transition for background color */
-        }
-        header {
-            background-color: white; /* White background */
             color: black;
-            padding: 20px;
-            text-align: center;
-            transition: background-color 0.3s ease; /* Transition for header */
-        }
-        header:hover {
-            background-color: #f0f0f0; /* Light gray on hover */
-        }
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3em;
-            margin: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s ease; /* Transition for container */
-        }
-        .container:hover {
-            transform: scale(1.02); /* Slightly scale up on hover */
-        }
-        .details {
-            margin: 20px 0;
-        }
-        .details h2 {
-            font-size: 2em;
-            margin: 10px 0;
-            color: black; /* Black font color */
-        }
-        .details p {
-            line-height: 1.6;
-            margin: 10px 0;
-            color: black; /* Black font color */
-        }
-        .map {
-            margin: 20px 0;
-        }
-        .photos {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin: 20px 0;
+            align-items: center;
+            height: 100vh;
         }
-        .photos img {
-            width: 45%;
-            border-radius: 8px;
-            transition: transform 0.3s ease; /* Transition for images */
-        }
-        .photos img:hover {
-            transform: scale(1.05); /* Scale up images on hover */
-        }
-        .directions {
-            background-color: #e9ecef; /* Light gray for contrast */
+        .container {
+            width: 21cm; /* A4 width */
+            height: 29.7cm; /* A4 height */
+            background: white;
             padding: 20px;
             border-radius: 8px;
-            margin: 20px 0;
-            text-align: left;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            overflow: auto; /* Allows scrolling if content overflows */
         }
-        .rsvp {
-            margin: 20px 0;
-            font-size: 1.2em;
+        h1, h2 {
+            color: black;
+            margin-bottom: 10px;
         }
-        .rsvp a {
-            color: #6f42c1; /* RSVP link color */
-            text-decoration: none;
-            transition: color 0.3s ease; /* Transition for link color */
-        }
-        .rsvp a:hover {
-            color: #4a2c9e; /* Darker shade on hover */
-        }
-        footer {
+        .contact-info {
             text-align: center;
-            padding: 10px;
-            background-color: white; /* White background */
-            color: black; /* Black font color */
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            transition: background-color 0.3s ease; /* Transition for footer */
+            margin-bottom: 20px;
         }
-        footer:hover {
-            background-color: #f0f0f0; /* Light gray on hover */
+        .contact-info a {
+            margin: 0 10px;
+            color: black;
+            text-decoration: none;
+        }
+        .summary, .experience, .projects, .education, .skills {
+            margin: 20px 0;
+        }
+        .experience, .projects, .education {
+            border-left: 5px solid #6f42c1;
+            padding-left: 10px;
+        }
+        ul {
+            padding-left: 20px;
         }
         @media (max-width: 600px) {
-            h1 {
-                font-size: 2.5em;
-            }
-            .details h2 {
-                font-size: 1.5em;
-            }
-            .photos {
-                flex-direction: column;
-            }
-            .photos img {
-                width: 100%;
+            .container {
+                width: 100%; /* Make it responsive on smaller screens */
+                height: auto; /* Allow height to adjust */
             }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Join Us for Our Wedding</h1>
-</header>
-
 <div class="container">
-    <div class="details">
-        <h2>Emma & Liam</h2>
-        <p>We invite you to celebrate our love and commitment to each other.</p>
-        <p><strong>Date:</strong> Saturday, June 15, 2024</p>
-        <p><strong>Time:</strong> 4:00 PM</p>
-        <p><strong>Location:</strong> The Grand Ballroom, 123 Celebration Ave, Cityville</p>
+    <header>
+        <h1>Abhinav Kesherwani</h1>
+        <div class="contact-info">
+            <a href="mailto:kesherwaniabhinav@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/abhinav-kesherwani" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <p>(+91) 6394347699</p>
+        </div>
+    </header>
+
+    <div class="summary">
+        <h2>Summary</h2>
+        <p>Dynamic and results-oriented Data Engineer with over 2 years of experience specializing in Azure Data Engineering. Proven expertise in designing and implementing scalable data pipelines, data modeling, and ETL/ELT processes. Seeking opportunities to leverage technical skills and drive innovative solutions in a challenging role.</p>
     </div>
 
-    <div class="photos">
-        <img src="https://via.placeholder.com/350" alt="Couple Photo 1">
-        <img src="https://via.placeholder.com/350" alt="Couple Photo 2">
-    </div>
-
-    <div class="map">
-        <h3>Venue Location</h3>
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509718!2d144.95373531531642!3d-37.81627997975169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f1e15ab%3A0x5045675218cedb0!2sGrand%20Ballroom!5e0!3m2!1sen!2sus!4v1632193406335!5m2!1sen!2sus" 
-            width="100%" 
-            height="300" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy"></iframe>
-    </div>
-
-    <div class="directions">
-        <h3>Directions</h3>
-        <p>To reach The Grand Ballroom:</p>
+    <div class="experience">
+        <h2>Experience</h2>
+        <h3>Big Data Engineer | Infosys Limited | Pune, IN | August 2021 - Present</h3>
         <ul>
-            <li>From City Center: Head north on Main St for 2 miles.</li>
-            <li>Turn right onto Celebration Ave, and continue for 1 mile.</li>
-            <li>The venue will be on your left.</li>
+            <li>Developed ADF and Databricks data pipelines to process millions of data points.</li>
+            <li>Automated processes using PowerShell scripts, significantly increasing project efficiency.</li>
+            <li>Worked extensively with ADLS Gen2, Azure Functions, and Azure DevOps for CI/CD and version control.</li>
+            <li>Collaborated with stakeholders to gather requirements and provide technical insights.</li>
+        </ul>
+        <h3>Summer Intern | TBI KIET | Ghaziabad, IN | May 2020 - June 2020</h3>
+        <ul>
+            <li>Learned and applied advanced concepts of Object-Oriented Programming (OOP).</li>
+            <li>Developed a Python-based personal assistant for user input processing.</li>
+            <li>Utilized Python for web scraping to collect data from web applications.</li>
         </ul>
     </div>
 
-    <div class="rsvp">
-        <p>Please RSVP by May 1, 2024</p>
-        <p><a href="mailto:kesherwaniabhinav@gmail.com">RSVP Here</a></p>
+    <div class="projects">
+        <h2>Projects</h2>
+        <h3>Universal Data Lake (Unilever PLC)</h3>
+        <ul>
+            <li>Developed and maintained metadata-driven data pipelines.</li>
+            <li>Designed a serverless backend using Azure Functions for monitoring and reporting automations.</li>
+            <li>Generated new datasets providing insights using Spark and Azure Data Factory.</li>
+        </ul>
+        <h3>Qlik Replicate Migration</h3>
+        <ul>
+            <li>Coordinated the decommissioning of the existing SLT system with the Qlik Replicate tool.</li>
+            <li>Enabled real-time data delivery for immediate business decision-making.</li>
+        </ul>
+    </div>
+
+    <div class="education">
+        <h2>Education</h2>
+        <h3>Bachelor of Technology in Information Technology | Abdul Kalam Technical University | 2021</h3>
+        <p>Cumulative GPA: 8.5/10.0</p>
+        <h3>Central Board of Secondary Education</h3>
+        <p>Senior Secondary Education | 2016: Cumulative Percentage: 85%</p>
+        <p>Senior Secondary Education | 2014: Cumulative GPA: 10.0/10.0</p>
+    </div>
+
+    <div class="skills">
+        <h2>Skills</h2>
+        <h3>Technical Skills:</h3>
+        <ul>
+            <li>Programming Languages: Python (Advanced), Scala</li>
+            <li>Big Data: PySpark, Spark Core, Databricks</li>
+            <li>Database: SQL, SSMS, SSIS</li>
+            <li>Cloud: Azure (Data Factory, Functions, Data Lake Gen2, Logic Apps)</li>
+            <li>Version Control: Git</li>
+            <li>CI/CD: Azure DevOps</li>
+            <li>Other: PowerShell scripting, Linux bash scripting</li>
+        </ul>
     </div>
 </div>
-
-<footer>
-    <p>&copy; 2024 Emma & Liam</p>
-</footer>
 
 </body>
 </html>
