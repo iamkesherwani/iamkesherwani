@@ -14,11 +14,44 @@
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
+            padding: 0;
+            display: flex; /* Use flexbox to align content */
+        }
+
+        .sidebar {
+            width: 200px; /* Width of the sidebar */
+            background-color: #ffffff; /* Sidebar background color */
+            padding: 15px; /* Padding inside the sidebar */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0; /* Fixes sidebar at the top */
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 600;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #f1f1f1;
+            color: #0056b3;
+        }
+
+        .content {
+            flex-grow: 1; /* Allows content to fill the remaining space */
             padding: 20px;
             color: #212529;
             line-height: 1.4; /* Reduced for a compact look */
             font-size: 12px; /* Smaller font size */
-            scroll-behavior: smooth;
         }
 
         header {
@@ -28,35 +61,6 @@
             padding: 15px; /* Reduced padding */
             border-radius: 8px; /* Rounded corners */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: #ffffff;
-            z-index: 10;
-            padding: 10px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: left;
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav a {
-            margin: 0 10px; /* Adjusted margin */
-            text-decoration: none;
-            color: #007bff; /* Bootstrap primary color */
-            font-weight: 600;
-            transition: color 0.3s;
-            font-size: 12px; /* Smaller size for nav links */
-        }
-
-        nav a:hover {
-            color: #0056b3; /* Darker shade on hover */
         }
 
         .contact-info {
@@ -89,10 +93,6 @@
             font-size: 14px; /* Smaller size for section titles */
         }
 
-        .experience, .projects, .education {
-            border-left: 5px solid #007bff;
-        }
-
         ul {
             padding-left: 20px;
         }
@@ -102,105 +102,106 @@
         }
 
         @media (max-width: 600px) {
-            h1 {
-                font-size: 1.5em; /* Smaller heading on mobile */
+            .sidebar {
+                display: none; /* Hide sidebar on small screens */
             }
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            .summary, .experience, .projects, .education, .skills {
-                margin: 10px 0;
+
+            .content {
+                padding: 10px; /* Reduced padding on mobile */
             }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Abhinav Kesherwani</h1>
-    <nav role="navigation">
+<div class="sidebar">
+    <h2>Navigation</h2>
+    <ul>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+    </ul>
+</div>
+
+<div class="content">
+    <header>
+        <h1>Abhinav Kesherwani</h1>
+        <div class="contact-info">
+            <span><i class="fas fa-phone"></i> (+91) 6394347699, IN</span>
+            <a href="mailto:kesherwaniabhinav@gmail.com" title="Email" aria-label="Email Abhinav Kesherwani">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/abhinav-kesherwani" target="_blank" title="LinkedIn" aria-label="LinkedIn Profile">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </header>
+
+    <section id="summary" class="summary">
+        <h2 class="section-title">Summary</h2>
+        <p>Dynamic and results-oriented Data Engineer with over 3+ years of experience specializing in Azure Data Engineering. Proven expertise in designing and implementing scalable data pipelines, data modeling, and ETL/ELT processes. Seeking opportunities to leverage technical skills and drive innovative solutions in a challenging role.</p>
+    </section>
+
+    <section id="experience" class="experience">
+        <h2 class="section-title">Experience</h2>
+        <h3>Big Data Engineer | Infosys Limited | Pune, IN | August 2021 - Present</h3>
         <ul>
-            <li><a href="#summary">Summary</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li>Engineered ADF and Databricks data pipelines to efficiently process millions of data points.</li>
+            <li>Automated processes using PowerShell scripts, significantly increasing project efficiency.</li>
+            <li>Worked extensively with ADLS Gen2, Azure Functions, and Azure DevOps for CI/CD and version control.</li>
+            <li>Collaborated with stakeholders to gather requirements and provide technical insights.</li>
         </ul>
-    </nav>
-    <div class="contact-info">
-        <span><i class="fas fa-phone"></i> (+91) 6394347699, IN</span>
-        <a href="mailto:kesherwaniabhinav@gmail.com" title="Email" aria-label="Email Abhinav Kesherwani">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/abhinav-kesherwani" target="_blank" title="LinkedIn" aria-label="LinkedIn Profile">
-            <i class="fab fa-linkedin"></i>
-        </a>
-    </div>
-</header>
+        <h3>Summer Intern | TBI KIET | Ghaziabad, IN | May 2020 - June 2020</h3>
+        <ul>
+            <li>Learned and applied advanced concepts of Object-Oriented Programming (OOP).</li>
+            <li>Developed a Python-based personal assistant for user input processing.</li>
+            <li>Utilized Python for web scraping to collect data from web applications.</li>
+        </ul>
+    </section>
 
-<section id="summary" class="summary">
-    <h2 class="section-title">Summary</h2>
-    <p>Dynamic and results-oriented Data Engineer with over 3+ years of experience specializing in Azure Data Engineering. Proven expertise in designing and implementing scalable data pipelines, data modeling, and ETL/ELT processes. Seeking opportunities to leverage technical skills and drive innovative solutions in a challenging role.</p>
-</section>
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
+        <h3>Universal Data Lake (Unilever PLC)</h3>
+        <ul>
+            <li>Developed and maintained metadata-driven data pipelines.</li>
+            <li>Designed a serverless backend using Azure Functions for monitoring and reporting automations.</li>
+            <li>Generated new datasets providing insights using Spark and Azure Data Factory.</li>
+            <li>Collaborated with stakeholders to gather requirements and provided technical insights for project success.</li>
+        </ul>
+        <h3>Qlik Replicate Migration</h3>
+        <ul>
+            <li>Coordinated the decommissioning of the existing SLT system with the Qlik Replicate tool.</li>
+            <li>Enabled real-time data delivery for immediate business decision-making.</li>
+            <li>Developed the Databricks pipeline to handle the streaming data from replicate for batch processing to use by product and downstream teams.</li>
+        </ul>
+    </section>
 
-<section id="experience" class="experience">
-    <h2 class="section-title">Experience</h2>
-    <h3>Big Data Engineer | Infosys Limited | Pune, IN | August 2021 - Present</h3>
-    <ul>
-        <li>Engineered ADF and Databricks data pipelines to efficiently process millions of data points.</li>
-        <li>Automated processes using PowerShell scripts, significantly increasing project efficiency.</li>
-        <li>Worked extensively with ADLS Gen2, Azure Functions, and Azure DevOps for CI/CD and version control.</li>
-        <li>Collaborated with stakeholders to gather requirements and provide technical insights.</li>
-    </ul>
-    <h3>Summer Intern | TBI KIET | Ghaziabad, IN | May 2020 - June 2020</h3>
-    <ul>
-        <li>Learned and applied advanced concepts of Object-Oriented Programming (OOP).</li>
-        <li>Developed a Python-based personal assistant for user input processing.</li>
-        <li>Utilized Python for web scraping to collect data from web applications.</li>
-    </ul>
-</section>
+    <section id="education" class="education">
+        <h2 class="section-title">Education</h2>
+        <h3>Bachelor of Technology in Information Technology | Abdul Kalam Technical University | 2021</h3>
+        <p>Cumulative GPA: 8.5/10.0</p>
+        <p>Relevant Coursework: Data Structure & Algorithm, Database Management System, Operating System, Software Engineering, etc.</p>
+        <h3>Central Board of Secondary Education</h3>
+        <p>Senior Secondary Education | 2016: Cumulative Percentage: 85%</p>
+        <p>Senior Secondary Education | 2014: Cumulative GPA: 10.0/10.0</p>
+    </section>
 
-<section id="projects" class="projects">
-    <h2 class="section-title">Projects</h2>
-    <h3>Universal Data Lake (Unilever PLC)</h3>
-    <ul>
-        <li>Developed and maintained metadata-driven data pipelines.</li>
-        <li>Designed a serverless backend using Azure Functions for monitoring and reporting automations.</li>
-        <li>Generated new datasets providing insights using Spark and Azure Data Factory.</li>
-        <li>Collaborated with stakeholders to gather requirements and provided technical insights for project success.</li>
-    </ul>
-    <h3>Qlik Replicate Migration</h3>
-    <ul>
-        <li>Coordinated the decommissioning of the existing SLT system with the Qlik Replicate tool.</li>
-        <li>Enabled real-time data delivery for immediate business decision-making.</li>
-        <li>Developed the Databricks pipeline to handle the streaming data from replicate for batch processing to use by product and downstream teams.</li>
-    </ul>
-</section>
-
-<section id="education" class="education">
-    <h2 class="section-title">Education</h2>
-    <h3>Bachelor of Technology in Information Technology | Abdul Kalam Technical University | 2021</h3>
-    <p>Cumulative GPA: 8.5/10.0</p>
-    <p>Relevant Coursework: Data Structure & Algorithm, Database Management System, Operating System, Software Engineering, etc.</p>
-    <h3>Central Board of Secondary Education</h3>
-    <p>Senior Secondary Education | 2016: Cumulative Percentage: 85%</p>
-    <p>Senior Secondary Education | 2014: Cumulative GPA: 10.0/10.0</p>
-</section>
-
-<section id="skills" class="skills">
-    <h2 class="section-title">Skills</h2>
-    <h3>Technical Skills:</h3>
-    <ul>
-        <li>Programming Languages: Python (Advanced), Scala</li>
-        <li>Big Data: PySpark, Spark Core, Databricks</li>
-        <li>Database: SQL, SSMS, SSIS</li>
-        <li>Cloud: Azure (Data Factory, Functions, Data Lake Gen2, Logic Apps)</li>
-        <li>Version Control: Git</li>
-        <li>CI/CD: Azure DevOps</li>
-        <li>Other: PowerShell scripting, Linux bash scripting</li>
-    </ul>
-</section>
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills</h2>
+        <h3>Technical Skills:</h3>
+        <ul>
+            <li>Programming Languages: Python (Advanced), Scala</li>
+            <li>Big Data: PySpark, Spark Core, Databricks</li>
+            <li>Database: SQL, SSMS, SSIS</li>
+            <li>Cloud: Azure (Data Factory, Functions, Data Lake Gen2, Logic Apps)</li>
+            <li>Version Control: Git</li>
+            <li>CI/CD: Azure DevOps</li>
+            <li>Other: PowerShell scripting, Linux bash scripting</li>
+        </ul>
+    </section>
+</div>
 
 </body>
 </html>
