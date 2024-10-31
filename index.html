@@ -11,7 +11,7 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #b0e0e6; /* Powder Blue */
+            background-color: #f9f9f9; /* Light gray for paper effect */
             color: black;
         }
         h1, h2 {
@@ -20,6 +20,20 @@
         header {
             text-align: center;
             margin-bottom: 20px;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
         }
         .contact-info {
             text-align: center;
@@ -47,26 +61,39 @@
             h1 {
                 font-size: 2em;
             }
+            nav ul {
+                flex-direction: column;
+            }
         }
     </style>
+    <link rel="stylesheet" href="print.css" media="print">
 </head>
 <body>
 
 <header>
     <h1>Abhinav Kesherwani</h1>
+    <nav>
+        <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+    </nav>
     <div class="contact-info">
         <a href="mailto:kesherwaniabhinav@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
         <a href="https://www.linkedin.com/in/abhinav-kesherwani" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <p>(+91) 6394347699</p>
+        <span><i class="fas fa-phone"></i> (+91) 6394347699</span>
     </div>
 </header>
 
-<div class="summary">
+<div id="summary" class="summary">
     <h2>Summary</h2>
     <p>Dynamic and results-oriented Data Engineer with over 3+ years of experience specializing in Azure Data Engineering. Proven expertise in designing and implementing scalable data pipelines, data modeling, and ETL/ELT processes. Seeking opportunities to leverage technical skills and drive innovative solutions in a challenging role.</p>
 </div>
 
-<div class="experience">
+<div id="experience" class="experience">
     <h2>Experience</h2>
     <h3>Big Data Engineer | Infosys Limited | Pune, IN | August 2021 - Present</h3>
     <ul>
@@ -83,22 +110,22 @@
     </ul>
 </div>
 
-<div class="projects">
+<div id="projects" class="projects">
     <h2>Projects</h2>
-    <h3>Universal Data Lake (Unilever PLC)</h3>
+    <h3><a href="link_to_your_project" target="_blank">Universal Data Lake (Unilever PLC)</a></h3>
     <ul>
         <li>Developed and maintained metadata-driven data pipelines.</li>
         <li>Designed a serverless backend using Azure Functions for monitoring and reporting automations.</li>
         <li>Generated new datasets providing insights using Spark and Azure Data Factory.</li>
     </ul>
-    <h3>Qlik Replicate Migration</h3>
+    <h3><a href="link_to_your_project" target="_blank">Qlik Replicate Migration</a></h3>
     <ul>
         <li>Coordinated the decommissioning of the existing SLT system with the Qlik Replicate tool.</li>
         <li>Enabled real-time data delivery for immediate business decision-making.</li>
     </ul>
 </div>
 
-<div class="education">
+<div id="education" class="education">
     <h2>Education</h2>
     <h3>Bachelor of Technology in Information Technology | Abdul Kalam Technical University | 2021</h3>
     <p>Cumulative GPA: 8.5/10.0</p>
@@ -107,7 +134,7 @@
     <p>Senior Secondary Education | 2014: Cumulative GPA: 10.0/10.0</p>
 </div>
 
-<div class="skills">
+<div id="skills" class="skills">
     <h2>Skills</h2>
     <h3>Technical Skills:</h3>
     <ul>
