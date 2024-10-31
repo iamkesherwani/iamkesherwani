@@ -14,16 +14,19 @@
             background-color: #f4f4f4; /* Softer background */
             color: #333;
             line-height: 1.6;
-        }
-        h1, h2, h3 {
-            color: #4a4a4a;
+            font-size: 16px; /* Improved readability */
+            scroll-behavior: smooth; /* Smooth scrolling */
         }
         header {
             text-align: center;
             margin-bottom: 30px;
         }
         nav {
-            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 10;
+            padding: 10px 0; /* Padding for better spacing */
         }
         nav ul {
             display: flex;
@@ -37,6 +40,10 @@
             color: #6f42c1;
             font-weight: 600;
         }
+        nav a:hover {
+            background-color: #e0e0e0; /* Background change on hover */
+            border-radius: 4px; /* Rounded corners on hover */
+        }
         .contact-info {
             text-align: center;
             margin-bottom: 20px;
@@ -48,10 +55,11 @@
         }
         .summary, .experience, .projects, .education, .skills {
             background: white;
+            border: 1px solid #e0e0e0; /* Soft border */
             padding: 20px;
             border-radius: 8px;
             margin: 20px 0;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         .section-title {
             border-bottom: 2px solid #6f42c1;
@@ -64,12 +72,19 @@
         ul {
             padding-left: 20px;
         }
+        ul li {
+            margin-bottom: 5px; /* Add space between list items */
+        }
         @media (max-width: 600px) {
             h1 {
                 font-size: 2em;
             }
             nav ul {
-                flex-direction: column;
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center items */
+            }
+            .summary, .experience, .projects, .education, .skills {
+                margin: 10px 0; /* Reduced margin for small screens */
             }
         }
     </style>
@@ -78,7 +93,7 @@
 
 <header>
     <h1>Abhinav Kesherwani</h1>
-    <nav>
+    <nav role="navigation">
         <ul>
             <li><a href="#summary">Summary</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -88,18 +103,22 @@
         </ul>
     </nav>
     <div class="contact-info">
-        <a href="mailto:kesherwaniabhinav@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/abhinav-kesherwani" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:kesherwaniabhinav@gmail.com" title="Email" aria-label="Email Abhinav Kesherwani">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/abhinav-kesherwani" target="_blank" title="LinkedIn" aria-label="LinkedIn Profile">
+            <i class="fab fa-linkedin"></i>
+        </a>
         <span><i class="fas fa-phone"></i> (+91) 6394347699</span>
     </div>
 </header>
 
-<div id="summary" class="summary">
+<section id="summary" class="summary">
     <h2 class="section-title">Summary</h2>
     <p>Dynamic and results-oriented Data Engineer with over 3 years of experience specializing in Azure Data Engineering. Proven expertise in designing and implementing scalable data pipelines, data modeling, and ETL/ELT processes. Seeking opportunities to leverage technical skills and drive innovative solutions in a challenging role.</p>
-</div>
+</section>
 
-<div id="experience" class="experience">
+<section id="experience" class="experience">
     <h2 class="section-title">Experience</h2>
     <h3>Big Data Engineer | Infosys Limited | Pune, IN | August 2021 - Present</h3>
     <ul>
@@ -114,9 +133,9 @@
         <li>Developed a Python-based personal assistant for user input processing.</li>
         <li>Utilized Python for web scraping to collect data from web applications.</li>
     </ul>
-</div>
+</section>
 
-<div id="projects" class="projects">
+<section id="projects" class="projects">
     <h2 class="section-title">Projects</h2>
     <h3><a href="link_to_your_project" target="_blank">Universal Data Lake (Unilever PLC)</a></h3>
     <ul>
@@ -129,18 +148,18 @@
         <li>Coordinated the decommissioning of the existing SLT system with the Qlik Replicate tool.</li>
         <li>Enabled real-time data delivery for immediate business decision-making.</li>
     </ul>
-</div>
+</section>
 
-<div id="education" class="education">
+<section id="education" class="education">
     <h2 class="section-title">Education</h2>
     <h3>Bachelor of Technology in Information Technology | Abdul Kalam Technical University | 2021</h3>
     <p>Cumulative GPA: 8.5/10.0</p>
     <h3>Central Board of Secondary Education</h3>
     <p>Senior Secondary Education | 2016: Cumulative Percentage: 85%</p>
     <p>Senior Secondary Education | 2014: Cumulative GPA: 10.0/10.0</p>
-</div>
+</section>
 
-<div id="skills" class="skills">
+<section id="skills" class="skills">
     <h2 class="section-title">Skills</h2>
     <h3>Technical Skills:</h3>
     <ul>
@@ -152,7 +171,7 @@
         <li>CI/CD: Azure DevOps</li>
         <li>Other: PowerShell scripting, Linux bash scripting</li>
     </ul>
-</div>
+</section>
 
 </body>
 </html>
