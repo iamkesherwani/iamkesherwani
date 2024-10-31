@@ -4,33 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhinav Kesherwani - Resume</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f4f4f4; /* Softer background */
-            color: #333;
-            line-height: 1.6;
-            font-size: 16px; /* Improved readability */
-            scroll-behavior: smooth; /* Smooth scrolling */
+            background-color: #e9ecef; /* Lighter background */
+            color: #212529;
+            line-height: 1.4; /* Reduced for a compact look */
+            font-size: 12px; /* Smaller font size */
+            scroll-behavior: smooth;
         }
         header {
             text-align: center;
             margin-bottom: 30px;
-            background-color: #ffffff; /* Header background */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-            padding: 20px;
+            background-color: #343a40; /* Dark header background */
+            color: #ffffff;
+            padding: 15px; /* Reduced padding */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         nav {
             position: sticky;
             top: 0;
-            background-color: white;
+            background-color: #ffffff;
             z-index: 10;
-            padding: 10px 0; /* Padding for better spacing */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         nav ul {
             display: flex;
@@ -39,57 +41,61 @@
             padding: 0;
         }
         nav a {
-            margin: 0 15px;
+            margin: 0 10px; /* Adjusted margin */
             text-decoration: none;
-            color: #6f42c1;
+            color: #007bff; /* Bootstrap primary color */
             font-weight: 600;
+            transition: color 0.3s;
+            font-size: 12px; /* Smaller size for nav links */
         }
         nav a:hover {
-            background-color: #e0e0e0; /* Background change on hover */
-            border-radius: 4px; /* Rounded corners on hover */
+            color: #0056b3; /* Darker shade on hover */
         }
         .contact-info {
             text-align: center;
             margin-bottom: 20px;
         }
         .contact-info a {
-            margin: 0 10px;
-            color: #6f42c1;
+            margin: 0 5px; /* Adjusted margin */
+            color: #007bff;
             text-decoration: none;
+            font-size: 12px; /* Smaller size for contact links */
         }
         .summary, .experience, .projects, .education, .skills {
             background: white;
-            border: 1px solid #e0e0e0; /* Soft border */
-            padding: 20px;
+            border: 1px solid #dee2e6;
+            padding: 10px; /* Reduced padding */
             border-radius: 8px;
             margin: 20px 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         .section-title {
-            border-bottom: 2px solid #6f42c1;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
+            border-bottom: 3px solid #007bff; /* Section title color */
+            padding-bottom: 3px; /* Reduced padding */
+            margin-bottom: 8px; /* Reduced margin */
             font-weight: 700;
+            color: #343a40; /* Dark title color */
+            font-size: 14px; /* Smaller size for section titles */
         }
         .experience, .projects, .education {
-            border-left: 5px solid #6f42c1;
+            border-left: 5px solid #007bff;
         }
         ul {
             padding-left: 20px;
         }
         ul li {
-            margin-bottom: 5px; /* Add space between list items */
+            margin-bottom: 5px; /* More space between list items */
         }
         @media (max-width: 600px) {
             h1 {
-                font-size: 2em;
+                font-size: 1.5em; /* Smaller heading on mobile */
             }
             nav ul {
-                flex-direction: column; /* Stack items vertically */
-                align-items: center; /* Center items */
+                flex-direction: column;
+                align-items: center;
             }
             .summary, .experience, .projects, .education, .skills {
-                margin: 10px 0; /* Reduced margin for small screens */
+                margin: 10px 0;
             }
         }
     </style>
