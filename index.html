@@ -19,6 +19,7 @@
         }
 
         .sidebar {
+        	font-family: 'Montserrat', sans-serif;
             width: 200px; /* Width of the sidebar */
             background-color: #ffffff; /* Sidebar background color */
             padding: 15px; /* Padding inside the sidebar */
@@ -36,7 +37,7 @@
             display: block;
             padding: 10px 15px;
             text-decoration: none;
-            color: #007bff;
+            color: #919f91;
             font-weight: 600;
             transition: background 0.3s, color 0.3s;
         }
@@ -46,7 +47,15 @@
             color: #0056b3;
         }
 
+        .contact-info {
+        	font-family: 'Montserrat', sans-serif;
+            margin: 15px 0; /* Adjusted margin */
+            font-size: 12px; /* Smaller size for contact info */
+            color: #212529; /* Text color */
+        }
+
         .content {
+        	font-family: 'Montserrat', sans-serif;
             flex-grow: 1; /* Allows content to fill the remaining space */
             padding: 20px;
             color: #212529;
@@ -55,24 +64,13 @@
         }
 
         header {
+        	font-family: 'Montserrat', sans-serif;
             text-align: left;
             margin-bottom: 30px;
             color: #667755;
             padding: 15px; /* Reduced padding */
             border-radius: 8px; /* Rounded corners */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-info {
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        .contact-info a {
-            margin: 0 5px; /* Adjusted margin */
-            color: #007bff;
-            text-decoration: none;
-            font-size: 12px; /* Smaller size for contact links */
         }
 
         .summary, .experience, .projects, .education, .skills {
@@ -100,6 +98,11 @@
         ul li {
             margin-bottom: 5px; /* More space between list items */
         }
+        h2{
+        	font-family: 'Montserrat', sans-serif;
+            text-align: justify;
+            color : #332255;
+        }
 
         @media (max-width: 600px) {
             .sidebar {
@@ -109,13 +112,28 @@
             .content {
                 padding: 10px; /* Reduced padding on mobile */
             }
+
+            .contact-info {
+                display: block; /* Ensure contact info displays on mobile */
+                font-size: 10px; /* Smaller font size on mobile */
+                text-align: center; /* Center align on mobile */
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="sidebar">
-    <h2>Navigation</h2>
+    <h2>Abhinav Kesherwani</h2>
+    <div class="contact-info">
+        <span><i class="fas fa-phone"></i> (+91) 6394347699</span><br>
+        <a href="mailto:kesherwaniabhinav@gmail.com" title="Email" aria-label="Email Abhinav Kesherwani">
+            <i class="fas fa-envelope"> @gmail</i>
+        </a>
+        <span><a href="https://www.linkedin.com/in/abhinav-kesherwani" target="_blank" title="LinkedIn" aria-label="LinkedIn Profile">
+            <i class="fab fa-linkedin"> LinkedIn</i>
+        </a></span>
+    </div>
     <ul>
         <li><a href="#summary">Summary</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -126,19 +144,6 @@
 </div>
 
 <div class="content">
-    <header>
-        <h1>Abhinav Kesherwani</h1>
-        <div class="contact-info">
-            <span><i class="fas fa-phone"></i> (+91) 6394347699, IN</span>
-            <a href="mailto:kesherwaniabhinav@gmail.com" title="Email" aria-label="Email Abhinav Kesherwani">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/abhinav-kesherwani" target="_blank" title="LinkedIn" aria-label="LinkedIn Profile">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-    </header>
-
     <section id="summary" class="summary">
         <h2 class="section-title">Summary</h2>
         <p>Dynamic and results-oriented Data Engineer with over 3+ years of experience specializing in Azure Data Engineering. Proven expertise in designing and implementing scalable data pipelines, data modeling, and ETL/ELT processes. Seeking opportunities to leverage technical skills and drive innovative solutions in a challenging role.</p>
