@@ -8,23 +8,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         html {
-            background-color: #e9ecef; /* Lighter background */
+            background-color: #e9ecef;
         }
 
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            display: flex; /* Use flexbox to align content */
+            display: flex;
+            flex-direction: row; /* Aligns sidebar and content side-by-side */
         }
 
         .sidebar {
-            width: 200px; /* Width of the sidebar */
-            background-color: #ffffff; /* Sidebar background color */
-            padding: 10px; /* Padding inside the sidebar */
+            width: 200px;
+            background-color: #ffffff;
+            padding: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             position: sticky;
-            top: 0; /* Fixes sidebar at the top */
+            top: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .sidebar ul {
@@ -47,80 +52,122 @@
         }
 
         .contact-info {
-            margin: 10px 0; /* Adjusted margin */
-            font-size: 10px; /* Smaller size for contact info */
-            color: #050505; /* Text color */
+            margin: 10px 0;
+            font-size: 10px;
+            color: #050505;
             font-weight: 600;
         }
 
         .content {
-            flex-grow: 1; /* Allows content to fill the remaining space */
-            padding: 15px; /* Adjusted padding */
+            flex-grow: 1;
+            padding: 15px;
             color: #212529;
-            line-height: 1.5; /* Slightly reduced for compactness */
-            font-size: 12px; /* Smaller base font size */
+            line-height: 1.5;
+            font-size: 12px;
         }
 
         header {
             text-align: left;
             margin-bottom: 20px;
             color: #667755;
-            padding: 10px; /* Reduced padding */
-            border-radius: 8px; /* Rounded corners */
+            padding: 10px;
+            border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .summary, .experience, .projects, .education, .skills {
-            background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            background: rgba(255, 255, 255, 0.9);
             border: 1px solid #dee2e6;
-            padding: 10px; /* Reduced padding */
+            padding: 10px;
             border-radius: 8px;
-            margin: 15px 0; /* Reduced margin */
+            margin: 15px 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .section-title {
-            border-bottom: 3px solid #007bff; /* Section title color */
-            padding-bottom: 5px; /* Reduced padding */
-            margin-bottom: 8px; /* Reduced margin */
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 5px;
+            margin-bottom: 8px;
             font-weight: 700;
-            color: #019f90; /* Dark title color */
-            font-size: 16px; /* Slightly smaller size for section titles */
+            color: #019f90;
+            font-size: 16px;
         }
 
         h3 {
-            font-size: 14px; /* Smaller subheading size */
-            margin: 8px 0; /* Reduced spacing for subheadings */
-            color: #0f0f0f; /* Subheading color */
+            font-size: 14px;
+            margin: 8px 0;
+            color: #0f0f0f;
             font-weight: 550;
         }
 
         ul {
-            padding-left: 15px; /* Adjusted padding for lists */
+            padding-left: 15px;
         }
 
         ul li {
-            margin-bottom: 4px; /* Less space between list items */
+            margin-bottom: 4px;
         }
 
         h2 {
-            font-size: 18px; /* Smaller main heading size */
-            color: #000f05; /* Main heading color */
+            font-size: 18px;
+            color: #000f05;
         }
 
-        @media (max-width: 600px) {
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
             .sidebar {
-                display: none; /* Hide sidebar on small screens */
+                width: 100%;
+                height: auto;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px;
+                box-shadow: none;
+                border-bottom: 1px solid #dee2e6;
+            }
+
+            .sidebar h2 {
+                font-size: 16px;
+                margin: 0;
+            }
+
+            .sidebar ul {
+                display: none; /* Hide the sidebar navigation on small screens */
+            }
+
+            .sidebar .contact-info {
+                font-size: 12px;
             }
 
             .content {
-                padding: 10px; /* Reduced padding on mobile */
+                padding: 10px;
+            }
+        }
+
+        /* Additional adjustments for very small screens */
+        @media (max-width: 480px) {
+            .sidebar .contact-info {
+                font-size: 10px;
+                text-align: center;
             }
 
-            .contact-info {
-                display: block; /* Ensure contact info displays on mobile */
-                font-size: 10px; /* Smaller font size on mobile */
-                text-align: center; /* Center align on mobile */
+            .content {
+                padding: 8px;
+                font-size: 11px;
+            }
+
+            h2 {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 14px;
             }
         }
     </style>
@@ -131,21 +178,14 @@
     <h2>Abhinav Kesherwani</h2>
     <div class="contact-info">
         <span><i class="fas fa-phone"></i> (+91) 6394347699</span><br>
-        <a href="mailto:kesherwaniabhinav@gmail.com?subject=Coffee-Connect&body=Hi%20Abhinav,%0A%0AI%20hope%20you're%20doing%20well.%0A%0AThank%20you%20for%20submitting%20your%20resume.%20After%20reviewing%20your%20profile,%20we%E2%80%99re%20pleased%20to%20inform%20you%20that%20your%20experience%20in%20Azure%20Data%20Engineering%20and%20Big%20Data%20technologies%20aligns%20well%20with%20our%20current%20role.%20We%E2%80%99d%20like%20to%20invite%20you%20for%20an%20interview%20to%20discuss%20your%20qualifications%20further.%0A%0APlease%20let%20us%20know%20your%20availability%20in%20the%20coming%20days,%20and%20we%E2%80%99ll%20arrange%20a%20suitable%20time.%0A%0ALooking%20forward%20to%20connecting%20soon!%0A%0ABest%20regards," 
-   title="Email Abhinav Kesherwani" aria-label="Email Abhinav Kesherwani">
-   <i class="fas fa-envelope"> @gmail</i>
-</a>
-        <span><a href="https://www.linkedin.com/in/abhinav-kesherwani" target="_blank" title="LinkedIn" aria-label="LinkedIn Profile">
-            <i class="fab fa-linkedin"> LinkedIn</i>
-        </a></span>
+        <a href="mailto:kesherwaniabhinav@gmail.com?subject=Coffee-Connect" 
+           title="Email Abhinav Kesherwani" aria-label="Email Abhinav Kesherwani">
+           <i class="fas fa-envelope"></i> Email
+        </a><br>
+        <a href="https://www.linkedin.com/in/abhinav-kesherwani" target="_blank" title="LinkedIn Profile" aria-label="LinkedIn Profile">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
     </div>
-    <ul>
-        <li><a href="#summary">Summary</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-    </ul>
 </div>
 
 <div class="content">
@@ -156,7 +196,14 @@
 
     <section id="experience" class="experience">
         <h2 class="section-title">Experience</h2>
-        <h3>Big Data Engineer | Infosys Limited | Pune, IN | August 2021 - Present</h3>
+        <h3>Associate Data Engineer | Metyis India | Gurgaon, IN | July 2024 - Present</h3>
+        <ul>
+            <li>Developed robust data pipelines using Databricks, streamlining the processing of millions of customer transactions for comprehensive profitability analysis and data-driven decision-making.</li>
+            <li>Designed and deployed the Medallion Architecture, structuring data across bronze, silver, and gold layers to ensure optimal integration and superior data quality for actionable customer profitability insights.</li>
+            <li>Led ABC analysis and EBITA calculations at the individual customer level, enabling precise customer segmentation and driving strategic decisions around pricing, resource allocation, and revenue optimization.</li>
+            <li>Worked closely with cross-functional teams to architect and automate end-to-end ETL processes, enhancing data flow efficiency and supporting customer retention initiatives through data-driven strategies.</li>
+        </ul>
+        <h3>Big Data Engineer | Infosys Limited | Pune, IN | August 2021 - July 2024</h3>
         <ul>
             <li>Engineered ADF and Databricks data pipelines to efficiently process millions of data points.</li>
             <li>Automated processes using PowerShell scripts, significantly increasing project efficiency.</li>
@@ -173,7 +220,15 @@
 
     <section id="projects" class="projects">
         <h2 class="section-title">Projects</h2>
-        <h3>Universal Data Lake (Unilever PLC)</h3>
+        <h3>Customer Profitability Project</h3>
+        <ul>
+            <li>Segmented customers using ABC Costing to identify high-value customers and prioritize resources for maximum profitability.</li>
+            <li>Calculated EBITA at the customer level to assess their true profitability, enabling targeted strategies for revenue growth.</li>
+            <li>Analyzed profit margins to recommend pricing and cost adjustments, improving profitability across different customer segments.</li>
+            <li>Delivered actionable insights that drove data-driven decision-making, optimizing customer retention strategies and increasing overall business profitability.</li>
+        </ul>
+
+        <h3>Universal Data Lake </h3>
         <ul>
             <li>Developed and maintained metadata-driven data pipelines.</li>
             <li>Designed a serverless backend using Azure Functions for monitoring and reporting automations.</li>
@@ -203,12 +258,11 @@
         <h3>Technical Skills:</h3>
         <ul>
             <li>Programming Languages: Python (Advanced), Scala</li>
-            <li>Big Data: PySpark, Spark Core, Databricks</li>
-            <li>Database: SQL, SSMS, SSIS</li>
-            <li>Cloud: Azure (Data Factory, Functions, Data Lake Gen2, Logic Apps)</li>
-            <li>Version Control: Git</li>
-            <li>CI/CD: Azure DevOps</li>
-            <li>Other: PowerShell scripting, Linux bash scripting</li>
+            <li>Big Data Tools: Apache Spark, Databricks, PySpark</li>
+            <li>Azure: Azure Data Factory, Azure Databricks, ADLS Gen2, Azure Functions</li>
+            <li>Data Modeling: Star Schema, Snowflake Schema, ER Diagrams</li>
+            <li>Database: SQL Server, MySQL</li>
+            <li>Other Tools: JIRA, Git, Confluence</li>
         </ul>
     </section>
 </div>
