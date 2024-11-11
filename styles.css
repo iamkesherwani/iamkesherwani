@@ -54,7 +54,7 @@ body {
 
 /* Sidebar Contact Info */
 .contact-info {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 14px;
     color: #050505;
     font-weight: 600;
@@ -63,7 +63,7 @@ body {
 .contact-info span,
 .contact-info a {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .contact-info a {
