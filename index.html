@@ -108,9 +108,13 @@
 
     <script>
         function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('open');
-        }
+    const sidebar = document.querySelector('.sidebar');
+    const content = document.querySelector('.content');
+    
+    sidebar.classList.toggle('open'); // Toggle the sidebar visibility
+    content.classList.toggle('shifted'); // Optionally add a class for content shifting (if needed)
+}
+
     </script>
 </body>
 </html>
