@@ -9,6 +9,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: row;
+    transition: margin-left 0.3s ease; /* Smooth transition for content when sidebar is toggled */
 }
 
 /* Sidebar Styles */
@@ -100,6 +101,13 @@ body {
     color: #212529;
     line-height: 1.5;
     font-size: 14px;
+    margin-left: 0; /* No margin by default */
+    transition: margin-left 0.3s ease; /* Smooth transition for content when the sidebar is toggled */
+}
+
+/* Sidebar Open - Shift content */
+.sidebar.open + .content {
+    margin-left: 240px; /* When the sidebar is open, push the content */
 }
 
 /* Section Styling */
