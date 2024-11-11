@@ -78,8 +78,8 @@ body {
 .toggle-sidebar {
     display: inline-block;
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 2px;
+    left: 5px;
     background-color: #007bff;
     color: #ffffff;
     border: none;
