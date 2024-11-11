@@ -1,0 +1,168 @@
+html {
+    background-color: #e9ecef;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #050505;
+    font-weight: 300;
+    transition: background 0.3s, color 0.3s;
+}
+
+.skills i {
+    color: #019f90;
+    margin-right: 8px;
+}
+
+.sidebar a:hover {
+    background-color: #f1f1f1;
+    color: #0056b3;
+}
+
+.contact-info {
+    margin: 10px 0;
+    font-size: 10px;
+    color: #050505;
+    font-weight: 600;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 15px;
+    color: #212529;
+    line-height: 1.5;
+    font-size: 12px;
+}
+
+header {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #667755;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.summary, .experience, .projects, .education, .skills {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #019f90;
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 14px;
+    margin: 8px 0;
+    color: #0f0f0f;
+    font-weight: 550;
+}
+
+ul {
+    padding-left: 15px;
+}
+
+ul li {
+    margin-bottom: 4px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #000f05;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        box-shadow: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .sidebar h2 {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .sidebar ul {
+        display: none;
+    }
+
+    .sidebar .contact-info {
+        font-size: 12px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 480px) {
+    .sidebar .contact-info {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .content {
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 14px;
+    }
+}
