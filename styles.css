@@ -5,7 +5,7 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
+    margin: 12;
     padding: 0;
     display: flex;
     flex-direction: row;
@@ -20,7 +20,7 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
-    left: -240px; /* Sidebar is hidden initially */
+    left: -237px; /* Sidebar is hidden initially */
     height: 100vh;
     display: flex;
     flex-direction: column;
