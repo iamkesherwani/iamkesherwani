@@ -221,3 +221,18 @@ h2 {
     color: #019f90;
     margin-right: 8px;
 }
+
+.download-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 12px;
+    background-color: #0077b6;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.download-link:hover {
+    background-color: #023e8a;
+}
