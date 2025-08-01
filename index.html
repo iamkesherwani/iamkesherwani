@@ -31,6 +31,9 @@
             <a href="https://www.linkedin.com/in/abhinav-kesherwani" target="_blank" title="LinkedIn Profile">
                 <i class="fab fa-linkedin"></i> LinkedIn
             </a>
+            <section>📅 Yesterday's Active Users:
+          <p><span id="yesterdayCount">Loading...</span> users visited the site.</p>
+        </section>
         </div>
     </div>
 
@@ -115,26 +118,36 @@
             </ul>
         </section>
     </div>
-    <div class="content">
-        <section>📅 Yesterday's Active Users:
-          <p><span id="yesterdayCount">Loading...</span> users visited the site.</p>
-        </section>
-    </div>
+        
       <script>
-    const now = new Date();
-    const yesterday = new Date(now);
-    yesterday.setDate(now.getDate() - 1);
+    function getDateSeed() {
+      const today = new Date();
+      return `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}-${today.getDay()}`;
+    }
 
-    // Pull date parts
-    const d = yesterday.getDate();       // Day of the month (1–31)
-    const m = yesterday.getMonth() + 1;  // Month (1–12)
-    const y = yesterday.getFullYear();   // Full year (e.g. 2025)
+    function getHash(seed) {
+      let hash = 0;
+      for (let i = 0; i < seed.length; i++) {
+        hash = seed.charCodeAt(i) + ((hash << 5) - hash);
+      }
+      return Math.abs(hash % 1000); // Create a base count between 0–999
+    }
 
-    // Generate pseudo-random number
-    const seed = d * m + y + 3;
-    const result = (seed % 9) ;
+    function updateCounter() {
+      const seed = getDateSeed();
+      const key = `visitorCount-${seed}`;
+      let count = parseInt(localStorage.getItem(key), 10);
 
-    document.getElementById("yesterdayCount").textContent = result;
+      if (isNaN(count)) {
+        count = getHash(seed); // base number for this day
+      }
+
+      count += 1;
+      localStorage.setItem(key, count);
+      document.getElementById("yesterdayCount").textContent = count;
+    }
+
+    updateCounter();
   </script>
     <script>
         function toggleSidebar() {
