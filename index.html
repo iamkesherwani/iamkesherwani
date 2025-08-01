@@ -130,7 +130,7 @@
       for (let i = 0; i < seed.length; i++) {
         hash = seed.charCodeAt(i) + ((hash << 5) - hash);
       }
-      return Math.abs(hash % 1000); // Create a base count between 0–999
+      return Math.abs(hash % 9) + 1; // Create a base count between 1–9
     }
 
     function updateCounter() {
