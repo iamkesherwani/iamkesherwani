@@ -115,7 +115,24 @@
             </ul>
         </section>
     </div>
+    <h5>📅 Yesterday's Active Users:</h5>
+      <p><span id="yesterdayCount">Loading...</span> users visited the site.</p>
+      <script>
+    const now = new Date();
+    const yesterday = new Date(now);
+    yesterday.setDate(now.getDate() - 1);
 
+    // Pull date parts
+    const d = yesterday.getDate();       // Day of the month (1–31)
+    const m = yesterday.getMonth() + 1;  // Month (1–12)
+    const y = yesterday.getFullYear();   // Full year (e.g. 2025)
+
+    // Generate pseudo-random number
+    const seed = d * m + y + 3;
+    const result = (seed % 9) ;
+
+    document.getElementById("yesterdayCount").textContent = result;
+  </script>
     <script>
         function toggleSidebar() {
     const sidebar = document.querySelector('.sidebar');
